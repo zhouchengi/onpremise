@@ -14,7 +14,7 @@ mail.username: 'sentry@duiba.com.cn'
 mail.password: 'B@T.zci2Derq8d4'
 mail.use-tls: true
 # The email address to send on behalf of
-mail.from: 'sentry@duiba.com.cn’
+mail.from: 'sentry@duiba.com.cn'
 
 # If you'd like to configure email replies, enable this.
 # mail.enable-replies: false

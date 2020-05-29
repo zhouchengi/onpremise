@@ -69,19 +69,19 @@ SECRET_KEY=$(docker-compose run --rm web config generate-secret-key 2> /dev/null
 sed -i -e 's/^SENTRY_SECRET_KEY=.*$/SENTRY_SECRET_KEY='"$SECRET_KEY"'/' $ENV_FILE
 echo "Secret key written to $ENV_FILE"
 
-echo ""
-echo "Setting up database..."
-if [ $CI ]; then
-  docker-compose run --rm web upgrade --noinput
-  echo ""
-  echo "Did not prompt for user creation due to non-interactive shell."
-  echo "Run the following command to create one yourself (recommended):"
-  echo ""
-  echo "  docker-compose run --rm web createuser"
-  echo ""
-else
-  docker-compose run --rm web upgrade
-fi
+# echo ""
+# echo "Setting up database..."
+# if [ $CI ]; then
+#   docker-compose run --rm web upgrade --noinput
+#   echo ""
+#   echo "Did not prompt for user creation due to non-interactive shell."
+#   echo "Run the following command to create one yourself (recommended):"
+#   echo ""
+#   echo "  docker-compose run --rm web createuser"
+#   echo ""
+# else
+#   docker-compose run --rm web upgrade
+# fi
 
 cleanup
 

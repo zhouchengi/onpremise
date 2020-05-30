@@ -97,6 +97,9 @@ SENTRY_USE_BIG_INTS = True
 # General #
 ###########
 
+# Enables the Custom Inbound Filters feature
+SENTRY_FEATURES['projects:custom-inbound-filters'] = True
+
 # Instruct Sentry that this install intends to be run by a single organization
 # and thus various UI optimizations should be enabled.
 SENTRY_SINGLE_ORGANIZATION = env('SENTRY_SINGLE_ORGANIZATION', True)
@@ -361,6 +364,3 @@ if 'GITHUB_APP_ID' in os.environ:
 if 'BITBUCKET_CONSUMER_KEY' in os.environ:
     BITBUCKET_CONSUMER_KEY = env('BITBUCKET_CONSUMER_KEY')
     BITBUCKET_CONSUMER_SECRET = env('BITBUCKET_CONSUMER_SECRET')
-
-# Enables the Custom Inbound Filters feature
-SENTRY_FEATURES['projects:custom-inbound-filters'] = True

@@ -270,7 +270,6 @@ SENTRY_WEB_OPTIONS = {
     'memory-report': False,
     # 'workers': 3,  # the number of web workers
 }
-SENTRY_URL_PREFIX = 'https://sentry.dui88.com'
 
 ##########
 # Docker #

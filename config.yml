@@ -46,6 +46,8 @@ mail.from: 'sentry@duiba.com.cn'
 #         host: 127.0.0.1
 #         port: 6379
 
+system.url-prefix: 'https://sentry.dui88.com'
+
 ################
 # File storage #
 ################

@@ -262,7 +262,7 @@ if env('SENTRY_USE_SSL', False):
 SENTRY_WEB_HOST = '0.0.0.0'
 SENTRY_WEB_PORT = 9000
 SENTRY_WEB_OPTIONS = {
-    'http': '%s:%s' % (SENTRY_WEB_HOST, SENTRY_WEB_PORT),
+    'https': '%s:%s' % (SENTRY_WEB_HOST, SENTRY_WEB_PORT),
     'protocol': 'uwsgi',
     # This is need to prevent https://git.io/fj7Lw
     'uwsgi-socket': None,
@@ -270,7 +270,7 @@ SENTRY_WEB_OPTIONS = {
     'memory-report': False,
     # 'workers': 3,  # the number of web workers
 }
-
+SENTRY_URL_PREFIX = 'https://sentry.dui88.com'
 
 ##########
 # Docker #
